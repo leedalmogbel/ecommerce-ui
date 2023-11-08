@@ -6,7 +6,8 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: coral;
+  position: relative;
+  overflow: hidden;
 `;
 
 const Arrow = styled.div`
@@ -29,6 +30,7 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
 `;
 
 const Slide = styled.div`
@@ -36,6 +38,7 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+  background-color: #${props => props.bg};
 `;
 
 const ImgContainer = styled.div`
@@ -61,7 +64,12 @@ const Desc = styled.p`
   font-weight: 500;
   letter-spacing: 3px;
 `;
-const Button = styled.button``;
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+`;
 
 
 const Slider = () => {
@@ -71,12 +79,34 @@ const Slider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-        <Slide>
+        <Slide bg="f5fafd">
           <ImgContainer>
             <Image src="https://fastly.picsum.photos/id/29/4000/2670.jpg?hmac=rCbRAl24FzrSzwlR5tL-Aqzyu5tX_PA95VJtnUXegGU"></Image>
           </ImgContainer>
           <InfoContainer>
             <Title>Winter Sale</Title>
+            <Desc>Dont Compromise on Style! get flat 30% off now for new arrivals.</Desc>
+            <Button>SHOP NOW</Button>
+          </InfoContainer>
+        </Slide>
+
+        <Slide bg="fcf1ed">
+          <ImgContainer>
+            <Image src="https://fastly.picsum.photos/id/29/4000/2670.jpg?hmac=rCbRAl24FzrSzwlR5tL-Aqzyu5tX_PA95VJtnUXegGU"></Image>
+          </ImgContainer>
+          <InfoContainer>
+            <Title>Popular Sale</Title>
+            <Desc>Dont Compromise on Style! get flat 30% off now for new arrivals.</Desc>
+            <Button>SHOP NOW</Button>
+          </InfoContainer>
+        </Slide>
+
+        <Slide bg="fbf0f4">
+          <ImgContainer>
+            <Image src="https://fastly.picsum.photos/id/29/4000/2670.jpg?hmac=rCbRAl24FzrSzwlR5tL-Aqzyu5tX_PA95VJtnUXegGU"></Image>
+          </ImgContainer>
+          <InfoContainer>
+            <Title>Featured Sale</Title>
             <Desc>Dont Compromise on Style! get flat 30% off now for new arrivals.</Desc>
             <Button>SHOP NOW</Button>
           </InfoContainer>
